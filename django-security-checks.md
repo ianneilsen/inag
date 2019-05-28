@@ -37,12 +37,15 @@ privsec
 Unix privesc
 
 http://pentestmonkey.net/tools/audit/unix-privesc-check
+
 Run the script and save the output in a file, and then grep for warning in it.
 
 Linprivchecker.py - safe to run
+
 https://github.com/reider-roque/linpostexp/blob/master/linprivchecker.py
 
 LinEnum - same as Ians basher.sh script - safe to run
+
 https://github.com/rebootuser/LinEnum
 
 run as
