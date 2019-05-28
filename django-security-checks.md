@@ -34,7 +34,7 @@ https://github.com/m4ll0k/WAScan
 
 privsec
 --------
-Unix privesc
+'''Unix privesc'''
 
 http://pentestmonkey.net/tools/audit/unix-privesc-check
 
