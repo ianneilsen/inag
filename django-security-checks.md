@@ -9,10 +9,11 @@ https://docs.djangoproject.com/en/2.1/topics/security/
 
 https://pypi.org/project/django-secure/
 
-
 Last resort scanner
 https://www.ponycheckup.com/
 https://github.com/mxsasha/ponycheckup
+
+List out the 3rd party python libs in user - look for vuls in libs
 
 Basic plays
 -------------
@@ -103,4 +104,16 @@ xss vulnerable
 (form.errors.as_json())
 payload = foo.<img src=x onerror=alert(1)>
 
-grep -R "ValidationError"
+grep -R "ValidationError" |grep -v :0
+grep -icr "@sensitive_variables" |grep -v :0
+grep -icr "@permission_required" |grep -v :0
+grep -icr "render()" |grep -v :0
+
+
+DEBUG = False
+
+    SECURE_SSL_REDIRECT = True This will redirect all HTTP traffic to HTTPS
+    SESSION_COOKIE_SECURE = True This will ensure that the session cookie is only sent over HTTPS
+    CSRF_COOKIE_SECURE = True This will ensure that the CSRF Token is only sent over HTTPS
+
+Is  django.security.* being used for logging purposes
