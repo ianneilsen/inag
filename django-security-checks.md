@@ -7,6 +7,12 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 https://docs.djangoproject.com/en/2.1/topics/security/
 
+https://pypi.org/project/django-secure/
+
+
+Last resort scanner
+https://www.ponycheckup.com/
+https://github.com/mxsasha/ponycheckup
 
 Basic plays
 -------------
@@ -23,7 +29,8 @@ nginx/apache front end
 	Check for x-forward headers from http to https
 	we can fake Host header if django allows this
 	html file inculsions using the django media or user-upload content
-	
+	It was discovered that Django incorrectly handled the default 404 page. A remote attacker could use this issue to spoof content using a malicious UR
+
 file inclusions
 code sanity - python code checkers/fuzzers
 server setup/config checks
@@ -44,6 +51,7 @@ https://github.com/python-security/pyt
 https://github.com/PyCQA/bandit
 https://www.kitploit.com/2017/08/spaghetti-web-application-security.html
 
+
 web app scan checks
 --------------------
 nickto
@@ -55,8 +63,6 @@ https://www.kitploit.com/2017/08/spaghetti-web-application-security.html
 If able to run from 3rd party source
 https://observatory.mozilla.org/
 
-Last resort scanner
-https://github.com/mxsasha/ponycheckup
 
 Vul databases
 ---------------
